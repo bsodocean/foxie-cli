@@ -1,11 +1,9 @@
 #!/usr/bin/env ts-node
 
+import { select } from "@inquirer/prompts";
 import { program } from "commander";
-import chalk from "chalk";
 import { opts } from "./enums/opts";
-import inquirer from "inquirer";
-import { select, Separator } from "@inquirer/prompts";
-import ora from "ora";
+import chalk from "chalk";
 import figlet from "figlet";
 
 async function foxieRun() {
@@ -51,6 +49,8 @@ async function foxieRun() {
       },
     ],
   });
+
+  const getGoodies = () => {};
 
   program.version("1.0.0").description("Peter's goodie system");
 

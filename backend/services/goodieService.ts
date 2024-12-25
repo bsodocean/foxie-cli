@@ -1,0 +1,3 @@
+class goodieService {
+  getGoodies() {}
+}
