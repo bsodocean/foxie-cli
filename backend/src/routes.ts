@@ -69,7 +69,9 @@ router.delete(
   "/api/deleteGoodie/:id",
   asyncHandler(async (req: Request, res: Response) => {
     const { id } = req.params;
-    const goodieToDelete = await prisma.goodie.delete({ where: { id: id } });
+    const goodieToDelete = await prisma.goodie.findUnique({
+      where: { id: id },
+    });
     !goodieToDelete
       ? res.status(400).json({ Error: "No matching goodie found" })
       : await prisma.goodie.delete({

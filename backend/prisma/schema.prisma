@@ -23,7 +23,7 @@ model AuditLog {
   oldPrice  Float    
   oldAmount Int      
   timestamp DateTime @default(now()) 
-  goodie    Goodie   @relation(fields: [goodieId], references: [id]) // 
+  goodie    Goodie   @relation(fields: [goodieId], references: [id], onDelete: Cascade) // 
 
   @@index([goodieId]) 
 }
