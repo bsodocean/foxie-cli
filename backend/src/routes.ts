@@ -5,11 +5,25 @@ import prisma from "../prisma/prismaClientSingleton";
 
 const router = Router();
 
+const sendResponse = (
+  res: Response,
+  status: "success" | "error",
+  data: any[],
+  message: string = "",
+  code: number = 200
+): void => {
+  res.status(code).json({
+    status,
+    message,
+    data,
+  });
+};
+
 router.get(
   "/api/getGoodies",
   asyncHandler(async (req: Request, res: Response) => {
     const goodies = await prisma.goodie.findMany();
-    res.status(200).json(goodies);
+    sendResponse(res, "success", goodies, "Goodies fetched successfully", 200);
   })
 );
 
