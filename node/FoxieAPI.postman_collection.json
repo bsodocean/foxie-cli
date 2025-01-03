@@ -1,0 +1,91 @@
+{
+  "info": {
+    "_postman_id": "081e3d93-9fd3-4b4d-8d5e-85330a0bf340",
+    "name": "FoxieAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+    "_exporter_id": "40111957"
+  },
+  "item": [
+    {
+      "name": "Get Goodies",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3000/api/getGoodies"
+      },
+      "response": []
+    },
+    {
+      "name": "Create Goodie",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": \"vlbrccb4YUnsq0Fhd4oi9\",\r\n    \"name\": \"Apple\",\r\n    \"price\": 1.99,\r\n    \"amount\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:3000/api/createGoodie"
+      },
+      "response": []
+    },
+    {
+      "name": "Update Goodie",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": \"vlbrccb4YUnsq0Fhd4oi9\",\r\n    \"name\": \"Pear\",\r\n    \"price\": 4.99,\r\n    \"amount\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:3000/api/updateGoodie/7BIweFrgKXYZ"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Goodie",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "http://localhost:3000/api/deleteGoodie/7BIweFrgKR"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Price History",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3000/api/getPriceHistory/7BIweFrgKR"
+      },
+      "response": []
+    },
+    {
+      "name": "Lookup Goodie",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3000/api/lookupGoodie/vlbrccb4YUnsq0Fhd4oi9"
+      },
+      "response": []
+    },
+    {
+      "name": "Filter Goodies",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3000/api/filterByQuantity"
+      },
+      "response": []
+    }
+  ]
+}
