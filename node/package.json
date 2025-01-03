@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "hello-world": "./src/index.ts"
+    "run-foxie": "./src/index.ts"
   },
   "scripts": {
     "start": "ts-node src/index.ts"
@@ -24,8 +24,7 @@
     "dotenv": "^16.4.7",
     "figlet": "^1.8.0",
     "inquirer": "^12.2.0",
-    "nanoid": "^5.0.9",
-    "ora": "^8.1.1",
-    "table": "^6.9.0"
+    "nanoid": "^3.3.4",
+    "ora": "^8.1.1"
   }
 }

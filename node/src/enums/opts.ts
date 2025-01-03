@@ -1,3 +1,5 @@
+import chalk from "chalk";
+
 export const opts = {
   createGoodie: {
     name: "Create goodie",
@@ -8,6 +10,11 @@ export const opts = {
     name: "Update goodie",
     value: "UPDATE GOODIE",
     description: "Update a goodie in Peter's database",
+  },
+  deleteGoodie: {
+    name: "Delete goodie",
+    value: "DELETE GOODIE",
+    description: "Delete a goodie in Peter's database",
   },
   listGoodies: {
     name: "List all goodies",
@@ -20,14 +27,15 @@ export const opts = {
     description: "Show Peter history of goodie prices",
   },
   searchGoodie: {
-    name: "Search for a goodie",
-    value: "SEACH FOR A GOODIE",
+    name: "Lookup a goodie",
+    value: "LOOKUP GOODIE",
     description: "Let Peter search for a specific goodie",
   },
   filterGoodiesByAmmount: {
     name: "Filter goodies by amount",
-    value: "FILTER BY QUANTITY",
+    value: "FILTERBYQ",
     description: "Filter Peter's goodies by quantity",
   },
 };
+
 // Created this for the sake of encapsulation and more readable code.
